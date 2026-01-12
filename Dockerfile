@@ -14,11 +14,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements
-COPY requirements.txt .
-
-# Install Python packages
-RUN pip install --no-cache-dir -r requirements.txt
+# Note: rasa/rasa:3.6.0 image already includes Rasa and all dependencies
+# No need to install requirements.txt again
 
 # Copy project files
 COPY domain.yml config.yml endpoints.yml credentials.yml ./
