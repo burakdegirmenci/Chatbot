@@ -1,0 +1,22 @@
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+# Tracker store - Konuşma geçmişi için
+# Varsayılan olarak memory kullanılır
+# Production için PostgreSQL veya Redis kullanılabilir
+# tracker_store:
+#   type: SQL
+#   dialect: "postgresql"
+#   url: "postgresql://user:password@localhost:5432/rasa"
+
+# Lock store - Çoklu instance için
+# lock_store:
+#   type: "redis"
+#   url: "localhost"
+#   port: 6379
+
+# Event broker - Analytics için
+# event_broker:
+#   type: sql
+#   dialect: postgresql
+#   url: postgresql://user:password@localhost:5432/rasa

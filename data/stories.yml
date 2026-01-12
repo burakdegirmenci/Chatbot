@@ -1,0 +1,109 @@
+version: "3.1"
+
+stories:
+
+- story: selamlama ve urun arama
+  steps:
+  - intent: selamlama
+  - action: utter_selamlama
+  - intent: urun_ara
+    entities:
+    - urun: "elma"
+  - action: action_urun_ara
+  - intent: fiyat_sorgula
+  - action: action_fiyat_getir
+
+- story: urun bulup sepete ekleme
+  steps:
+  - intent: urun_ara
+    entities:
+    - urun: "süt"
+  - action: action_urun_ara
+  - intent: sepete_ekle
+    entities:
+    - miktar: 2
+    - urun: "süt"
+  - action: action_sepete_ekle
+  - intent: sepet_goster
+  - action: action_sepet_goster
+
+- story: stok kontrolu ve satin alma
+  steps:
+  - intent: stok_sorgula
+    entities:
+    - urun: "ekmek"
+  - action: action_stok_kontrol
+  - intent: sepete_ekle
+    entities:
+    - miktar: 3
+    - urun: "ekmek"
+  - action: action_sepete_ekle
+  - intent: siparis_tamamla
+  - action: action_siparis_olustur
+
+- story: siparis takibi
+  steps:
+  - intent: selamlama
+  - action: utter_selamlama
+  - intent: siparis_takip
+    entities:
+    - siparis_no: "12345"
+  - action: action_siparis_takip
+  - intent: elveda
+  - action: utter_elveda
+
+- story: oneri isteme ve satin alma
+  steps:
+  - intent: oneri_iste
+  - action: action_oneri_ver
+  - intent: sepete_ekle
+  - action: action_sepete_ekle
+  - intent: siparis_tamamla
+  - action: action_siparis_olustur
+
+- story: yardim talebi
+  steps:
+  - intent: yardim
+  - action: utter_yardim
+  - intent: urun_ara
+  - action: action_urun_ara
+
+- story: bos sepet kontrolu
+  steps:
+  - intent: sepet_goster
+  - action: action_sepet_goster
+  - intent: urun_ara
+  - action: action_urun_ara
+
+- story: kategori araması
+  steps:
+  - intent: urun_ara
+    entities:
+    - kategori: "elektronik"
+  - action: action_urun_ara
+  - intent: fiyat_sorgula
+  - action: action_fiyat_getir
+  - intent: sepete_ekle
+  - action: action_sepete_ekle
+
+- story: coklu urun ekleme
+  steps:
+  - intent: sepete_ekle
+    entities:
+    - miktar: 2
+    - urun: "elma"
+  - action: action_sepete_ekle
+  - intent: sepete_ekle
+    entities:
+    - miktar: 1
+    - urun: "süt"
+  - action: action_sepete_ekle
+  - intent: sepet_goster
+  - action: action_sepet_goster
+  - intent: siparis_tamamla
+  - action: action_siparis_olustur
+
+- story: elveda diyerek ayrilma
+  steps:
+  - intent: elveda
+  - action: utter_elveda

@@ -1,0 +1,47 @@
+recipe: default.v1
+language: tr
+
+pipeline:
+  # Tokenization - Türkçe için
+  - name: WhitespaceTokenizer
+
+  # Featurization
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+
+  # Intent Classification
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+
+  # Entity Extraction
+  - name: EntitySynonymMapper
+
+  # Fallback
+  - name: FallbackClassifier
+    threshold: 0.7
+
+policies:
+  # Memoization - Kesin eşleşmeler için
+  - name: MemoizationPolicy
+
+  # Rule-based
+  - name: RulePolicy
+    core_fallback_threshold: 0.4
+    core_fallback_action_name: "action_default_fallback"
+
+  # Machine Learning Policy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true
+
+  # Unexpected Intent Policy
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100

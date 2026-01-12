@@ -1,0 +1,97 @@
+version: "3.1"
+
+intents:
+  - selamlama
+  - elveda
+  - urun_ara
+  - fiyat_sorgula
+  - stok_sorgula
+  - sepete_ekle
+  - sepet_goster
+  - siparis_tamamla
+  - siparis_takip
+  - yardim
+  - oneri_iste
+
+entities:
+  - urun
+  - miktar
+  - kategori
+  - siparis_no
+
+slots:
+  urun:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: urun
+
+  miktar:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: miktar
+
+  kategori:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: kategori
+
+  sepet:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  siparis_no:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: siparis_no
+
+responses:
+  utter_selamlama:
+    - text: "Merhaba! E-ticaret mağazamıza hoş geldiniz! 🛍️"
+    - text: "Selam! Size nasıl yardımcı olabilirim?"
+    - text: "Hoş geldiniz! Ürünlerimize göz atmak ister misiniz?"
+
+  utter_elveda:
+    - text: "Görüşmek üzere! İyi alışverişler! 👋"
+    - text: "Hoşça kalın! Tekrar bekleriz 😊"
+
+  utter_yardim:
+    - text: |
+        Size şu konularda yardımcı olabilirim:
+
+        🔍 Ürün arama ve fiyat sorgulama
+        🛒 Sepete ürün ekleme
+        📦 Sipariş takibi
+        💡 Ürün önerileri
+
+        Ne yapmak istersiniz?
+
+  utter_anlamadim:
+    - text: "Üzgünüm, tam anlayamadım. Başka türlü söyleyebilir misiniz?"
+    - text: "Bunu anlayamadım. 'yardım' yazarak neler yapabileceğimi görebilirsiniz."
+
+  utter_sepet_bos:
+    - text: "Sepetiniz henüz boş. Ürün aramak ister misiniz? 🛒"
+
+actions:
+  - action_urun_ara
+  - action_fiyat_getir
+  - action_stok_kontrol
+  - action_sepete_ekle
+  - action_sepet_goster
+  - action_siparis_olustur
+  - action_siparis_takip
+  - action_oneri_ver
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

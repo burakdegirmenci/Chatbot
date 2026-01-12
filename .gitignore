@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Rasa
+models/*.tar.gz
+.rasa/
+results/
+
+# Cache files
+data/urunler_cache.xml
+*.cache
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Environment
+.env
+.env.local
+.env.production.local
+*.env.backup
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Node modules (if any frontend tooling)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Sensitive data
+credentials.yml.backup
+*.key
+*.pem
+*.crt
+secrets/

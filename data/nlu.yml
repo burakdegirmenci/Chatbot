@@ -1,0 +1,148 @@
+version: "3.1"
+
+nlu:
+- intent: selamlama
+  examples: |
+    - merhaba
+    - selam
+    - hey
+    - günaydın
+    - iyi günler
+    - naber
+    - hoş geldiniz
+    - sa
+    - selamün aleyküm
+    - selam bot
+
+- intent: elveda
+  examples: |
+    - görüşürüz
+    - hoşça kal
+    - bye
+    - güle güle
+    - iyi günler
+    - çıkış
+    - kapanabilirsin
+    - teşekkürler güle güle
+    - bb
+
+- intent: urun_ara
+  examples: |
+    - [elma](urun) var mı
+    - [domates](urun) arıyorum
+    - [süt](urun) satıyor musunuz
+    - [ekmek](urun) bulabilir miyim
+    - [çikolata](urun) var mı sizde
+    - [telefon](urun) görmek istiyorum
+    - [laptop](urun) modelleri
+    - [ayakkabı](urun) kategorisine bakabilir miyim
+    - [şampuan](urun) arıyorum
+    - [pirinç](urun) var mı
+    - [elektronik](kategori) ürünler
+    - [giyim](kategori) kategorisi
+    - [gıda](kategori) ürünleri göster
+    - [mobilya](kategori) araması
+    - ürün ara
+    - ne satıyorsunuz
+    - ürünleriniz neler
+
+- intent: fiyat_sorgula
+  examples: |
+    - [elma](urun) kaç lira
+    - [domates](urun) fiyatı ne
+    - [süt](urun) ne kadar
+    - [ekmek](urun) fiyatını söyler misin
+    - [çikolata](urun)nın fiyatı nedir
+    - [telefon](urun) kaça
+    - [laptop](urun) fiyatları
+    - fiyat nedir
+    - kaç para
+    - ne kadar tutar
+    - ücret ne kadar
+    - fiyat listesi var mı
+
+- intent: stok_sorgula
+  examples: |
+    - [elma](urun) stokta var mı
+    - [domates](urun) kaldı mı
+    - [süt](urun) tükendi mi
+    - [ekmek](urun) var mı stokta
+    - [çikolata](urun) mevcut mu
+    - stoklarınız nasıl
+    - ne kadar stok var
+    - tükendi mi bu
+    - hala satıyor musunuz
+
+- intent: sepete_ekle
+  examples: |
+    - [2](miktar) kilo [elma](urun) sepete ekle
+    - [1](miktar) [domates](urun) ekle
+    - [3](miktar) adet [süt](urun) istiyorum
+    - [5](miktar) [ekmek](urun) alalım
+    - sepete at
+    - bunu sepete ekle
+    - satın almak istiyorum
+    - [1](miktar) tane ekle
+    - [10](miktar) [şampuan](urun) ekle
+    - sepetime koy
+    - alıyorum bunu
+    - evet sepete ekle
+
+- intent: sepet_goster
+  examples: |
+    - sepetim
+    - sepete ne ekledim
+    - sepeti göster
+    - ne aldım
+    - alışveriş listesi
+    - sepetimi görebilir miyim
+    - sepet içeriği
+    - ne var sepette
+    - toplam ne kadar
+
+- intent: siparis_tamamla
+  examples: |
+    - siparişi tamamla
+    - satın al
+    - ödeme yap
+    - sipariş ver
+    - alışverişi bitir
+    - tamamla
+    - onayla
+    - sipariş oluştur
+    - öde
+
+- intent: siparis_takip
+  examples: |
+    - siparişim nerede
+    - [12345](siparis_no) numaralı sipariş
+    - kargo takip
+    - sipariş durumu
+    - [#456](siparis_no) sipariş kodu
+    - nerede paketim
+    - ne zaman gelir
+    - teslimat durumu
+
+- intent: yardim
+  examples: |
+    - yardım
+    - help
+    - ne yapabilirsin
+    - neler yapıyorsun
+    - nasıl çalışırsın
+    - kullanım
+    - komutlar neler
+    - başlangıç
+    - ne işe yararsın
+
+- intent: oneri_iste
+  examples: |
+    - ne önerirsin
+    - popüler ürünler
+    - çok satanlar
+    - öneri
+    - kampanyalar var mı
+    - indirimli ürünler
+    - en çok satanlar
+    - öneriniz nedir
+    - trend ürünler

@@ -1,0 +1,52 @@
+version: "3.1"
+
+# Test stories - Bot'un beklenen davranışlarını test eder
+
+test_stories:
+
+- test_story: basit urun arama
+  steps:
+  - user: |
+      elma var mı
+    intent: urun_ara
+    entities:
+    - urun: elma
+  - action: action_urun_ara
+  - bot: elma bulundu
+
+- test_story: fiyat sorgula ve sepete ekle
+  steps:
+  - user: |
+      süt kaç lira
+    intent: fiyat_sorgula
+    entities:
+    - urun: süt
+  - action: action_fiyat_getir
+  - user: |
+      2 tane sepete ekle
+    intent: sepete_ekle
+    entities:
+    - miktar: 2
+    - urun: süt
+  - action: action_sepete_ekle
+
+- test_story: sepet kontrolu
+  steps:
+  - user: |
+      sepetimi göster
+    intent: sepet_goster
+  - action: action_sepet_goster
+
+- test_story: siparis olusturma
+  steps:
+  - user: |
+      3 kilo elma ekle
+    intent: sepete_ekle
+    entities:
+    - miktar: 3
+    - urun: elma
+  - action: action_sepete_ekle
+  - user: |
+      siparişi tamamla
+    intent: siparis_tamamla
+  - action: action_siparis_olustur

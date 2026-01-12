@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<katalog>
+    <urun>
+        <id>1</id>
+        <isim>Elma</isim>
+        <kategori>Gıda</kategori>
+        <alt_kategori>Meyve</alt_kategori>
+        <fiyat>15.00</fiyat>
+        <stok>100</stok>
+        <birim>kg</birim>
+        <aciklama>Taze yerli elma, günlük hasat</aciklama>
+        <resim>https://example.com/images/elma.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>2</id>
+        <isim>Domates</isim>
+        <kategori>Gıda</kategori>
+        <alt_kategori>Sebze</alt_kategori>
+        <fiyat>12.50</fiyat>
+        <stok>80</stok>
+        <birim>kg</birim>
+        <aciklama>Organik domates</aciklama>
+        <resim>https://example.com/images/domates.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>3</id>
+        <isim>Süt</isim>
+        <kategori>Gıda</kategori>
+        <alt_kategori>Süt Ürünleri</alt_kategori>
+        <fiyat>25.00</fiyat>
+        <stok>50</stok>
+        <birim>adet</birim>
+        <aciklama>1 litre tam yağlı süt</aciklama>
+        <resim>https://example.com/images/sut.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>4</id>
+        <isim>Ekmek</isim>
+        <kategori>Gıda</kategori>
+        <alt_kategori>Fırın Ürünleri</alt_kategori>
+        <fiyat>8.00</fiyat>
+        <stok>200</stok>
+        <birim>adet</birim>
+        <aciklama>Taze günlük ekmek</aciklama>
+        <resim>https://example.com/images/ekmek.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>5</id>
+        <isim>Çikolata</isim>
+        <kategori>Gıda</kategori>
+        <alt_kategori>Atıştırmalık</alt_kategori>
+        <fiyat>18.00</fiyat>
+        <stok>120</stok>
+        <birim>adet</birim>
+        <aciklama>%70 kakao bitter çikolata</aciklama>
+        <resim>https://example.com/images/cikolata.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>6</id>
+        <isim>Şampuan</isim>
+        <kategori>Kişisel Bakım</kategori>
+        <alt_kategori>Saç Bakımı</alt_kategori>
+        <fiyat>45.00</fiyat>
+        <stok>30</stok>
+        <birim>adet</birim>
+        <aciklama>Tüm saç tipleri için şampuan 500ml</aciklama>
+        <resim>https://example.com/images/sampuan.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>7</id>
+        <isim>Diş Macunu</isim>
+        <kategori>Kişisel Bakım</kategori>
+        <alt_kategori>Ağız Bakımı</alt_kategori>
+        <fiyat>35.00</fiyat>
+        <stok>40</stok>
+        <birim>adet</birim>
+        <aciklama>Beyazlatıcı diş macunu 100ml</aciklama>
+        <resim>https://example.com/images/dis-macunu.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>8</id>
+        <isim>iPhone 15</isim>
+        <kategori>Elektronik</kategori>
+        <alt_kategori>Telefon</alt_kategori>
+        <fiyat>45000.00</fiyat>
+        <stok>10</stok>
+        <birim>adet</birim>
+        <aciklama>128GB Mavi</aciklama>
+        <resim>https://example.com/images/iphone15.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>9</id>
+        <isim>MacBook Pro</isim>
+        <kategori>Elektronik</kategori>
+        <alt_kategori>Bilgisayar</alt_kategori>
+        <fiyat>65000.00</fiyat>
+        <stok>5</stok>
+        <birim>adet</birim>
+        <aciklama>M3 Pro, 16GB RAM, 512GB SSD</aciklama>
+        <resim>https://example.com/images/macbook.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>10</id>
+        <isim>Spor Ayakkabı</isim>
+        <kategori>Giyim</kategori>
+        <alt_kategori>Ayakkabı</alt_kategori>
+        <fiyat>800.00</fiyat>
+        <stok>25</stok>
+        <birim>adet</birim>
+        <aciklama>42 numara koşu ayakkabısı</aciklama>
+        <resim>https://example.com/images/ayakkabi.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>11</id>
+        <isim>Pirinç</isim>
+        <kategori>Gıda</kategori>
+        <alt_kategori>Temel Gıda</alt_kategori>
+        <fiyat>85.00</fiyat>
+        <stok>150</stok>
+        <birim>kg</birim>
+        <aciklama>Baldo pirinç</aciklama>
+        <resim>https://example.com/images/pirinc.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+
+    <urun>
+        <id>12</id>
+        <isim>Zeytinyağı</isim>
+        <kategori>Gıda</kategori>
+        <alt_kategori>Temel Gıda</alt_kategori>
+        <fiyat>250.00</fiyat>
+        <stok>60</stok>
+        <birim>litre</birim>
+        <aciklama>Sızma zeytinyağı</aciklama>
+        <resim>https://example.com/images/zeytinyagi.jpg</resim>
+        <aktif>true</aktif>
+    </urun>
+</katalog>

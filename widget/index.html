@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticaret Chatbot Widget Demo</title>
+    <link rel="stylesheet" href="chatbot-widget.css">
+</head>
+<body>
+    <!-- Demo e-ticaret sayfası -->
+    <div class="demo-page">
+        <header>
+            <h1>🛍️ Demo E-Ticaret Sitesi</h1>
+            <p>Chatbot widget'ımızı test edin!</p>
+        </header>
+
+        <main>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Elma" alt="Elma">
+                    <h3>Elma</h3>
+                    <p class="price">15 TL/kg</p>
+                    <button>Sepete Ekle</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Süt" alt="Süt">
+                    <h3>Süt</h3>
+                    <p class="price">25 TL/adet</p>
+                    <button>Sepete Ekle</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Ekmek" alt="Ekmek">
+                    <h3>Ekmek</h3>
+                    <p class="price">8 TL/adet</p>
+                    <button>Sepete Ekle</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget">
+        <!-- Widget Butonu -->
+        <div id="chat-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" fill="white"/>
+            </svg>
+            <span class="notification-badge">1</span>
+        </div>
+
+        <!-- Chat Penceresi -->
+        <div id="chat-window" style="display: none;">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="bot-info">
+                    <div class="bot-avatar">🤖</div>
+                    <div>
+                        <h3>Alışveriş Asistanı</h3>
+                        <span class="status">● Çevrimiçi</span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button id="minimize-btn" title="Küçült">─</button>
+                    <button id="close-btn" title="Kapat">✕</button>
+                </div>
+            </div>
+
+            <!-- Messages -->
+            <div id="chat-messages">
+                <div class="message bot-message">
+                    <div class="avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Merhaba! E-ticaret mağazamıza hoş geldiniz! Size nasıl yardımcı olabilirim? 🛍️</p>
+                        <span class="timestamp">Şimdi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div id="typing-indicator" style="display: none;">
+                <div class="message bot-message">
+                    <div class="avatar">🤖</div>
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input -->
+            <div class="chat-input">
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Mesajınızı yazın..."
+                    autocomplete="off"
+                >
+                <button id="send-btn" title="Gönder">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Quick Replies -->
+            <div id="quick-replies">
+                <button class="quick-reply">🔍 Ürün Ara</button>
+                <button class="quick-reply">🛒 Sepetim</button>
+                <button class="quick-reply">🔥 Popüler Ürünler</button>
+                <button class="quick-reply">❓ Yardım</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot-widget.js"></script>
+</body>
+</html>
