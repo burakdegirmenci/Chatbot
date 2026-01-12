@@ -10,11 +10,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements
-COPY requirements.txt .
+# Copy requirements (minimal for action server)
+COPY requirements-actions.txt .
 
 # Install Python packages
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements-actions.txt
 
 # Copy actions
 COPY actions /app/actions

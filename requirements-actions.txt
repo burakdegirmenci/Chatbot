@@ -1,0 +1,9 @@
+# Minimal dependencies for Rasa Action Server
+# Action server için sadece gerekli paketler
+
+# Rasa SDK (action server için yeterli)
+rasa-sdk==3.6.0
+
+# Utilities
+python-dotenv==1.0.0
+requests==2.31.0
