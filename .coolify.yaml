@@ -1,0 +1,4 @@
+# Coolify Deployment Configuration
+# Docker Compose kullan, Nixpacks değil
+
+type: docker-compose
