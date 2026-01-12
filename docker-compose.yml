@@ -18,11 +18,7 @@ services:
     volumes:
       - ./models:/app/models
       - ./data:/app/data
-    command: >
-      run
-      --enable-api
-      --cors "*"
-      --port 5005
+    # Command is defined in Dockerfile
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5005/"]
@@ -43,7 +39,7 @@ services:
     volumes:
       - ./actions:/app/actions
       - ./data:/app/data
-    command: run actions
+    # Command is defined in Dockerfile.actions
     restart: unless-stopped
     depends_on:
       - rasa-server
