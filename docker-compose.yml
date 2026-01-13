@@ -11,8 +11,8 @@ services:
       dockerfile: Dockerfile
     image: ${DOCKER_REGISTRY:-ghcr.io/yourname}/rasa-chatbot:latest
     container_name: rasa-server
-    ports:
-      - "${RASA_PORT:-5005}:5005"
+    expose:
+      - "5005"
     environment:
       - RASA_MODEL_DIR=/app/models
     volumes:
@@ -34,8 +34,8 @@ services:
       dockerfile: Dockerfile.actions
     image: ${DOCKER_REGISTRY:-ghcr.io/yourname}/rasa-actions:latest
     container_name: rasa-actions
-    ports:
-      - "${ACTIONS_PORT:-5055}:5055"
+    expose:
+      - "5055"
     volumes:
       - ./actions:/app/actions
       - ./data:/app/data
@@ -56,8 +56,8 @@ services:
       dockerfile: Dockerfile.widget
     image: ${DOCKER_REGISTRY:-ghcr.io/yourname}/rasa-widget:latest
     container_name: chatbot-widget
-    ports:
-      - "${WIDGET_PORT:-8080}:80"
+    expose:
+      - "80"
     restart: unless-stopped
     depends_on:
       - rasa-server
