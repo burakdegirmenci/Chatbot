@@ -21,8 +21,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY domain.yml config.yml endpoints.yml credentials.yml ./
 COPY data ./data
 
-# Train model (uncomment for auto-training during build)
-# RUN rasa train --out models
+# Train model during build (required for production)
+RUN rasa train --out models
 
 # Switch back to non-root user
 USER 1001
