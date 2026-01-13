@@ -34,5 +34,5 @@ EXPOSE 5005
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
   CMD curl -f http://localhost:5005/ || exit 1
 
-# Default command
-CMD ["rasa", "run", "--enable-api", "--cors", "*", "--port", "5005"]
+# Default command (ENTRYPOINT already has 'rasa')
+CMD ["run", "--enable-api", "--cors", "*", "--port", "5005"]
